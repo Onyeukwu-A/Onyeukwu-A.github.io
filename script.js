@@ -8,7 +8,7 @@ const REPOS_TO_SHOW = 4;
 
 (function(){
   var views = document.querySelectorAll('[data-view]');
-  var names = {home:'Anuri Onyeukwu – Product Manager, Cofounder & CPO at TagGrid', taggrid:'TagGrid case study · Anuri Onyeukwu', abara:'Abara Care case study · Anuri Onyeukwu', pennywise:'Pennywise case study · Anuri Onyeukwu'};
+  var names = {home:'Anuri Onyeukwu | Product Manager', taggrid:'TagGrid case study · Anuri Onyeukwu', abara:'Abara Care case study · Anuri Onyeukwu', pennywise:'Pennywise case study · Anuri Onyeukwu'};
   function show(target, anchor){
     views.forEach(function(v){ v.hidden = v.getAttribute('data-view') !== target; });
     document.title = names[target];
@@ -45,6 +45,8 @@ const REPOS_TO_SHOW = 4;
   var url = 'https://github.com/' + user;
   document.querySelectorAll('.js-github-link').forEach(function(a){ a.href = url; });
   document.querySelectorAll('.js-github-user').forEach(function(s){ s.textContent = user; });
+  var section = document.getElementById('github');
+  if (!section || section.hidden) return; // section hidden: skip the live repo list
   Promise.all([
     fetch('https://api.github.com/users/' + user).then(function(r){ return r.ok ? r.json() : null; }),
     fetch('https://api.github.com/users/' + user + '/repos?sort=updated&per_page=20').then(function(r){ return r.ok ? r.json() : []; })

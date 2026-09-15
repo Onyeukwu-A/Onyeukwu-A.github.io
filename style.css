@@ -156,7 +156,7 @@ footer{border-top:1px solid var(--line);padding-block:26px;color:var(--faint)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 /* case study pages */
-[data-view][hidden]{display:none!important}
+[data-view][hidden],section[hidden]{display:none!important}
 .cs-hero{border-bottom:1px solid var(--line);background:radial-gradient(ellipse 70% 90% at 80% 0%,rgba(214,176,98,.08),transparent 70%),var(--ink)}
 .cs-hero .wrap{padding-block:clamp(40px,7vw,80px)}
 .back{display:inline-flex;gap:8px;align-items:center;color:var(--muted);text-decoration:none;font-size:.92rem}
@@ -216,3 +216,8 @@ footer .footer-links a:hover{color:var(--gold)}
 /* hero title line */
 .hero h1 .role .nw{white-space:nowrap}
 .hero h1 .role i{font-style:normal;color:var(--gold);padding:0 .15em}
+
+/* icons in buttons and footer links */
+.ico{width:18px;height:18px;flex:none}
+footer .footer-links a{display:inline-flex;align-items:center;gap:6px}
+footer .footer-links .ico{width:15px;height:15px}
