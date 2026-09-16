@@ -8,9 +8,9 @@ Plain HTML, CSS and JavaScript on GitHub Pages. No build step, no backend.
 ```
 /
 ├── index.html      page content: hero, work, case studies, experience, skills, about, GitHub, contact
-├── style.css       design (colours are the variables at the top)
+├── style.css       design: bone paper, forest ink, clay accent, scroll animations (colours are the variables at the top)
 ├── script.js       your GitHub username + page switching for the case studies
-├── og-image.png          link preview image (LinkedIn, WhatsApp, X)
+├── og-image-v4.jpg       link preview image (LinkedIn, WhatsApp, X)
 ├── favicon.svg           browser tab icon ("AO")
 ├── favicon-32.png        tab icon for older browsers
 ├── apple-touch-icon.png  icon for phone home screens
@@ -21,6 +21,12 @@ Plain HTML, CSS and JavaScript on GitHub Pages. No build step, no backend.
 │   └── Anuri-Onyeukwu-CV.pdf      CV behind the Download CV buttons
 └── README.md
 ```
+
+## Design
+
+- Fonts: Fraunces (headings) and Instrument Sans (body), loaded from Google Fonts.
+- Colours: paper `#F5F0E8`, ink `#1C1A17`, accent oxblood `#7B2D2A`.
+- The Abara Care phone on the home page is built in HTML (in `index.html`). To use a real screenshot instead, replace the `<div class="phone">…</div>` block with `<img src="assets/abara-home.png" alt="Abara Care prototype home screen">`.
 
 ## Settings
 
@@ -37,7 +43,7 @@ Plain HTML, CSS and JavaScript on GitHub Pages. No build step, no backend.
 ## After changes
 
 - Update `<lastmod>` in `sitemap.xml` to the date of the change.
-- If you change the photo or title, make a new `og-image.png` (1200×630), then paste your link into LinkedIn Post Inspector so LinkedIn refreshes its preview.
+- If you change the photo or title, make a new preview image (1200×630 JPG) with a new file name, update it in `index.html`, then paste your link into LinkedIn Post Inspector so LinkedIn refreshes its preview.
 
 ## Run locally
 
