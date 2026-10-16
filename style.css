@@ -456,3 +456,9 @@ footer nav a:hover{color:var(--on-dark)}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
   .front .portrait img{scale:1}
 }
+
+/* Oct 2026: two links under an entry, and the approach list inside About */
+.entry-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin:0}
+.about .copy .takeaways{margin:30px 0 28px}
+.about .copy .takeaways li{color:var(--ink-2)}
+.about .copy .takeaways b{color:var(--ink);font-weight:600}
